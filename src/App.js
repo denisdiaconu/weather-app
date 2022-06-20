@@ -4,6 +4,7 @@ import Buttons from './components/Buttons';
 import Inputs from './components/Inputs';
 import TimeCity from './components/TimeCity';
 import TempAndDetails from './components/TempAndDetails';
+import Forecast from './components/Forecast';
 
 function App() {
   return (
@@ -12,6 +13,8 @@ function App() {
       <Inputs />
       <TimeCity />
       <TempAndDetails />
+      <Forecast name="every hour forecast" />
+      <Forecast name="every day forecast" />
     </div>
   );
 }
