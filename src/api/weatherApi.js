@@ -1,4 +1,5 @@
 import { data } from "autoprefixer";
+import { DateTime } from "luxon";
 
 const API_KEY = process.env.REACT_APP_DEFAULT;
 const BASE_LINK = 'https://api.openweathermap.org/data/2.5';
@@ -10,7 +11,24 @@ const getData = (type, searchParams) => {
 };
 
 const formatForecastWeather = (data) => {
-    let
+    let { timezone, daily, hourly } = data;
+    daily = daily.slice(1, 6).map(t => {
+        return {
+            title: formatLocal(t.dt, timezone, 'ccc'),
+            temp: t.temp.day,
+            icon: t.weather[0].icon
+        }
+    });
+
+    hourly = hourly.slice(1, 6).map(t => {
+        return {
+            title: formatLocal(t.dt, timezone, 'hh:mm a'),
+            temp: t.temp.day,
+            icon: t.weather[0].icon
+        }
+    });
+
+    return { timezone, daily, hourly}
 }
 
 const getFormatData = async (searchParams) => {
@@ -21,7 +39,11 @@ const getFormatData = async (searchParams) => {
         formatForecastWeather
     )
 
-    return formatWeatherNow
+    return {...formatWeatherNow, ...formatForecast}
 }
+
+const formatLocal = (secs, zone, format = "cccc, dd LLL yyyy' | Local time: 'hh:mm a") => DateTime.fromSeconds(
+    secs
+).setZone(zone).toFormat(format);
 
 export default getFormatData;
