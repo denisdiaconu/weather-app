@@ -6,24 +6,36 @@ import TimeCity from './components/TimeCity';
 import TempAndDetails from './components/TempAndDetails';
 import Forecast from './components/Forecast';
 import getFormatData from './api/weatherApi';
+import { useEffect, useState } from 'react';
 
 function App() {
 
-  const fetchWeather = async () => {
-    const data = await getFormatData({q: "london"});
-    console.log(data)
-  };
+  const [query, setQuery] = useState({q: 'berlin'})
+  const [weather, setWeather] = useState(null)
 
-  fetchWeather();
+  useEffect(() => {
+    const fetchWeather = async () => {
+      await getFormatData({...query}).then((data) => {
+        setWeather(data);
+      })
+    };
+    fetchWeather();
+  }, [query])
+
 
   return (
     <div className="max-w-screen-md mx-auto h-fit mt-5 py-6 px-32 shadow-lg shadow-gray-500 bg-gradient-to-br from-orange-400 to-orange-700">
       <Buttons />
       <Inputs />
-      <TimeCity />
-      <TempAndDetails />
-      <Forecast name="every hour forecast" />
-      <Forecast name="every day forecast" />
+
+      {weather && (
+        <div>
+          <TimeCity />
+          <TempAndDetails />
+          <Forecast name="every hour forecast" />
+          <Forecast name="every day forecast" />
+        </div>
+      )}
     </div>
   );
 }
