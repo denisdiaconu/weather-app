@@ -25,8 +25,8 @@ function App() {
 
   return (
     <div className="max-w-screen-md mx-auto h-fit mt-5 py-6 px-32 shadow-lg shadow-gray-500 bg-gradient-to-br from-orange-400 to-orange-700">
-      <Buttons />
-      <Inputs />
+      <Buttons setQuery={setQuery} />
+      <Inputs setQuery={setQuery} />
 
       {weather && (
         <div>

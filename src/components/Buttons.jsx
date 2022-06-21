@@ -1,7 +1,7 @@
 import React from 'react'
 import { v4 as uuidv4 } from 'uuid';
 
-function Buttons() {
+function Buttons({ setQuery }) {
 
     const famousCities = [
         {
@@ -25,7 +25,7 @@ function Buttons() {
   return (
     <div className='items-center justify-around my-1 flex'>
         {famousCities.map((city) => (
-            <button key={city.id} className='text-white font-semibold text-lg'>{city.name}</button>
+            <button key={city.id} onClick={() => setQuery({ q: city.name })} className='text-white font-semibold text-lg'>{city.name}</button>
         ))}
     </div>
   )

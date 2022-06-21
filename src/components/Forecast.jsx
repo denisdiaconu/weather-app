@@ -14,7 +14,7 @@ function Forecast({name, list}) {
             {list.map(item => (
                 <div key={uuidv4()} className='flex flex-col my-2 justify-center items-center'>
                     <p className='font-normal text-sm'>{item.title}</p>
-                    <img src={iconUrlChange(item.icon)} alt="temp img" className='w-10 my-1' />
+                    <img src={iconUrlChange(item.icon)} alt="temp img" className='w-12 my-1' />
                     <p className='font-semibold'>{`${item.temp.toFixed()}°`}</p>
                 </div>      
             ))}
