@@ -32,8 +32,8 @@ function App() {
         <div>
           <TimeCity weather={weather} />
           <TempAndDetails weather={weather} />
-          <Forecast name="every hour forecast" />
-          <Forecast name="every day forecast" />
+          <Forecast name="every hour forecast" list={weather.hourly} />
+          <Forecast name="every day forecast" list={weather.daily} />
         </div>
       )}
     </div>

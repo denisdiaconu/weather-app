@@ -3,7 +3,6 @@ import { UilSun } from '@iconscout/react-unicons'
 import { formatLocal, iconUrlChange } from '../api/weatherApi'
 
 function TempAndDetails({weather}) {
-  console.log(weather.weather[0].icon)
   return (
     <div>
         <div className='flex flex-row py-7 justify-center items-center '>
