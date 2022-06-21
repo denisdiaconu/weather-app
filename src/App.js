@@ -10,7 +10,7 @@ import { useEffect, useState } from 'react';
 
 function App() {
 
-  const [query, setQuery] = useState({q: 'berlin'})
+  const [query, setQuery] = useState({q: 'Sofia'})
   const [weather, setWeather] = useState(null)
 
   useEffect(() => {
@@ -22,9 +22,19 @@ function App() {
     fetchWeather();
   }, [query])
 
+  const changeBackground = () => {
+    if(!weather) return "from-cyan-700 to-blue-700";
+    if(weather.main.temp <= 10 ) {
+      return "from-blue-400 to-blue-700"
+    } else if (weather.main.temp <= 20) {
+      return "from-cyan-700 to-blue-700"
+    }
+    return "from-yellow-700 to-orange-700"
+  }
+
 
   return (
-    <div className="max-w-screen-md mx-auto h-fit mt-5 py-6 px-32 shadow-lg shadow-gray-500 bg-gradient-to-br from-orange-400 to-orange-700">
+    <div className={`max-w-screen-md mx-auto h-fit mt-5 py-6 px-32 shadow-lg shadow-gray-500 bg-gradient-to-br ${changeBackground()}`}>
       <Buttons setQuery={setQuery} />
       <Inputs setQuery={setQuery} />
 
