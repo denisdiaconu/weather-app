@@ -6,7 +6,7 @@ const BASE_LINK = 'https://api.openweathermap.org/data/2.5';
 
 const getData = (type, searchParams) => {
     const url = new URL(BASE_LINK + '/' + type);
-    url.search = new URLSearchParams({...searchParams, appid:API_KEY})
+    url.search = new URLSearchParams({...searchParams, appid:API_KEY, units: 'metric'})
     return fetch(url).then((resolution) => resolution.json());
 };
 
