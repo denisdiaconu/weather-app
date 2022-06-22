@@ -15,10 +15,10 @@ function App() {
   useEffect(() => {
     const fetchWeather = async () => {
       await getFormatData({...query}).then((data) => {
-        setWeather(data);
+        setWeather(data)
       })
     };
-    fetchWeather();
+    fetchWeather()
   }, [query])
 
   const changeBackground = () => {

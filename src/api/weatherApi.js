@@ -3,6 +3,7 @@ import { DateTime } from "luxon";
 const API_KEY = process.env.REACT_APP_DEFAULT;
 const BASE_LINK = 'https://api.openweathermap.org/data/2.5';
 
+
 const getData = (type, searchParams) => {
     const url = new URL(BASE_LINK + '/' + type);
     url.search = new URLSearchParams({...searchParams, appid:API_KEY, units: 'metric'})
