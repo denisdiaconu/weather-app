@@ -34,7 +34,7 @@ function App() {
 
   return (
     <div className="flex md:items-center h-fit md:h-screen w-screen">
-      <div className={`md:max-w-screen-md w-screen mx-auto h-fit md:h-fit py-10 md:px-32 md:shadow-lg md:shadow-gray-500 bg-gradient-to-br ${changeBackground()} md:rounded`}>
+      <div className={`md:max-w-screen-md w-screen mx-auto h-fit md:h-fit pt-6 md:pt-10 pb-10 md:px-32 md:shadow-lg md:shadow-gray-500 bg-gradient-to-br ${changeBackground()} md:rounded`}>
         <Buttons setQuery={setQuery} />
         <Inputs setQuery={setQuery} />
 

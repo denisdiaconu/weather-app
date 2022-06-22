@@ -23,7 +23,7 @@ function Buttons({ setQuery }) {
     ]
 
   return (
-    <div className='items-center justify-around my-3 flex'>
+    <div className='items-center justify-around md:my-3 flex'>
         {famousCities.map((city) => (
             <button key={city.id} onClick={() => setQuery({ q: city.name })} className='text-white font-semibold text-lg'>{city.name}</button>
         ))}
