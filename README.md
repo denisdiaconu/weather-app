@@ -68,9 +68,6 @@ To get a local copy up and running follow these simple example steps on the comm
 
 Contributions, issues, and feature requests are welcome!
 
-## Acknowledgments
-- [NelsoSakwa](https://www.behance.net/sakwadesignstudio) For the design.
-
 ## Show your support
 
 Give a ⭐️ if you like this project!
