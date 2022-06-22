@@ -4,8 +4,8 @@ import { formatLocal } from '../api/weatherApi'
 function TimeCity({weather}) {
   return (
     <div>
-        <div className='flex flex-row my-7 justify-center items-center'>
-            <p className='text-white font-light text-xl'>
+        <div className='flex flex-row mt-12 justify-center items-center'>
+            <p className='text-white font-light md:text-xl'>
                 {formatLocal(weather.dt, weather.timezone)}
             </p>
         </div>

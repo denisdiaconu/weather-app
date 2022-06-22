@@ -5,7 +5,7 @@ import { formatLocal, iconUrlChange } from '../api/weatherApi'
 function TempAndDetails({weather}) {
   return (
     <div>
-        <div className='flex flex-row py-7 justify-center items-center '>
+        <div className='flex flex-row pt-7 justify-center items-center '>
             <p className='text-xl text-orange-300 '>{weather.weather[0].main}</p>
         </div>
         <div className='flex flex-row py-4 text-white justify-evenly items-center'>
