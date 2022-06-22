@@ -15,7 +15,7 @@ Weather App provides a detailed forecast with the current temperature in celsius
 **Click [here](https://weather-app-denis.netlify.app/) in order to see the page of this project.**
 
 
-![Page](https://github.com/denisdiaconu/weather-app/blob/basic/src/images/weatherApp.jpg)
+![Page](https://github.com/denisdiaconu/weather-app/blob/master/src/images/weatherApp.jpg)
 
 
 ## Getting Started
