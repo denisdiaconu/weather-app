@@ -18,8 +18,8 @@ function Buttons({ setQuery }) {
         },
         {
             id: uuidv4(),
-            name: 'Sofia'
-        },
+            name: 'Madagascar'
+        }
     ]
 
   return (

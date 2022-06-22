@@ -2,7 +2,6 @@ import React from 'react'
 import { formatLocal } from '../api/weatherApi'
 
 function TimeCity({weather}) {
-    console.log(weather)
   return (
     <div>
         <div className='flex flex-row my-7 justify-center items-center'>

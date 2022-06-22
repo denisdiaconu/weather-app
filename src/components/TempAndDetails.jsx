@@ -8,7 +8,7 @@ function TempAndDetails({weather}) {
         <div className='flex flex-row py-7 justify-center items-center '>
             <p className='text-xl text-orange-300 '>{weather.weather[0].main}</p>
         </div>
-        <div className='flex flex-row py-4 text-white justify-around items-center'>
+        <div className='flex flex-row py-4 text-white justify-evenly items-center'>
             <img src={iconUrlChange(weather.weather[0].icon)} alt="temp img" className='w-20' />
             <p className='flex text-5xl'>{`${weather.main.temp.toFixed()}°`}</p>
         </div>

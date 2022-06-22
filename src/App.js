@@ -34,18 +34,20 @@ function App() {
 
 
   return (
-    <div className={`max-w-screen-md mx-auto h-fit mt-5 py-6 px-32 shadow-lg shadow-gray-500 bg-gradient-to-br ${changeBackground()}`}>
-      <Buttons setQuery={setQuery} />
-      <Inputs setQuery={setQuery} />
+    <div className="flex items-center h-screen w-screen">
+      <div className={`md:max-w-screen-md  mx-auto h-fit mt-5 py-6 md:px-32 shadow-lg shadow-gray-500 bg-gradient-to-br ${changeBackground()} rounded`}>
+        <Buttons setQuery={setQuery} />
+        <Inputs setQuery={setQuery} />
 
-      {weather && (
-        <div>
-          <TimeCity weather={weather} />
-          <TempAndDetails weather={weather} />
-          <Forecast name="every hour forecast" list={weather.hourly} />
-          <Forecast name="every day forecast" list={weather.daily} />
-        </div>
-      )}
+        {weather && (
+          <div>
+            <TimeCity weather={weather} />
+            <TempAndDetails weather={weather} />
+            <Forecast name="Every hour forecast" list={weather.hourly} />
+            <Forecast name="Every day forecast" list={weather.daily} />
+          </div>
+        )}
+      </div>
     </div>
   );
 }
