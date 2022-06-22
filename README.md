@@ -21,6 +21,7 @@ Weather App provides a detailed forecast with the current temperature in celsius
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps on the command line.
+
 > Clone the project from it's github repo.
 ```bash
 
@@ -33,24 +34,24 @@ To get a local copy up and running follow these simple example steps on the comm
 
   $ cd weather-app
   
-  ```
+```
   
 > Install all dev dependencies
-  ```bash
+```bash
 
   $ npm install
 
 ```
 
 > Run the server
-  ```bash
+```bash
 
   $ npm start
 
 ```
 
 > Run the test
-  ```bash
+```bash
 
   $ npm test
 
