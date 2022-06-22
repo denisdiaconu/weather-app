@@ -10,7 +10,7 @@ Weather App provides a detailed forecast with the current temperature in celsius
 - CSS
 - Tailwind CSS
 
-![Page](https://https://github.com/denisdiaconu/weather-app/src/images/weatherApp.jpg)
+![Page]([https://https://github.com/denisdiaconu/weather-app/src/images/weatherApp.jpg](https://github.com/denisdiaconu/weather-app/blob/basic/src/images/weatherApp.jpg))
 
 
 ## Getting Started
