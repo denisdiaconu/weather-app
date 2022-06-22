@@ -1,5 +1,4 @@
 import './App.css';
-import UilReact from '@iconscout/react-unicons/icons/uil-react'
 import Buttons from './components/Buttons';
 import Inputs from './components/Inputs';
 import TimeCity from './components/TimeCity';

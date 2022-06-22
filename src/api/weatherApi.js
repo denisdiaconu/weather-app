@@ -1,4 +1,3 @@
-import { data } from "autoprefixer";
 import { DateTime } from "luxon";
 
 const API_KEY = process.env.REACT_APP_DEFAULT;
