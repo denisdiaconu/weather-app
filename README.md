@@ -11,10 +11,6 @@ Weather App provides a detailed forecast with the current temperature in celsius
 - Tailwind CSS
 
 
-## 🔴 Live <a name = "here"></a>
-**Click [here](https://weather-app-denis.netlify.app/) in order to see the page of this project.**
-
-
 ![Page](https://github.com/denisdiaconu/weather-app/blob/master/src/images/weatherApp.jpg)
 
 
